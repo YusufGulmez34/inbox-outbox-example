@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vkXJAtgCEqIzSlhsMrc9ERdwzpJ+C9qADPYgZBv1usZW8upbT21Jm3nbYFz8De7rj1gf1ni9as3aCOiSin1BpQ==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\walte\\OneDrive\\Masaüstü\\inbox-outbox-example\\InBoxOutBoxExample\\Core\\InBoxOutBoxExample.Domain\\InBoxOutBoxExample.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\walte\\.nuget\\packages\\mongodb.bson\\2.18.0\\mongodb.bson.2.18.0.nupkg.sha512",
+    "C:\\Users\\walte\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

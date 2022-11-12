@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{0C5FE06C-E8D5-4D8A-965A-187EA42B8FA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F0E52AAD-7E17-4811-BFD8-57244D5CED43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{BC4FB2D3-4A4C-44D0-9692-BDB17B3A77CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InBoxOutBoxExample.Domain", "Core\InBoxOutBoxExample.Domain\InBoxOutBoxExample.Domain.csproj", "{1D7A2834-0DA4-4861-80AA-180C22328B46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InBoxOutBoxExample.Application", "Core\InBoxOutBoxExample.Application\InBoxOutBoxExample.Application.csproj", "{C8A88F37-22E7-4840-B7FE-CAA8557619CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InBoxOutBoxExample.Persistence", "Infrastructure\InBoxOutBoxExample.Persistence\InBoxOutBoxExample.Persistence.csproj", "{34F31D8B-973E-4AC2-85A7-F98C1BE42E59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InBoxOutBoxExample.API", "Presentation\InBoxOutBoxExample.API\InBoxOutBoxExample.API.csproj", "{CFD69375-AB83-4EA4-B533-1213E6C27A28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D7A2834-0DA4-4861-80AA-180C22328B46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D7A2834-0DA4-4861-80AA-180C22328B46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D7A2834-0DA4-4861-80AA-180C22328B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D7A2834-0DA4-4861-80AA-180C22328B46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8A88F37-22E7-4840-B7FE-CAA8557619CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8A88F37-22E7-4840-B7FE-CAA8557619CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8A88F37-22E7-4840-B7FE-CAA8557619CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8A88F37-22E7-4840-B7FE-CAA8557619CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34F31D8B-973E-4AC2-85A7-F98C1BE42E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34F31D8B-973E-4AC2-85A7-F98C1BE42E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34F31D8B-973E-4AC2-85A7-F98C1BE42E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F31D8B-973E-4AC2-85A7-F98C1BE42E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFD69375-AB83-4EA4-B533-1213E6C27A28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFD69375-AB83-4EA4-B533-1213E6C27A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFD69375-AB83-4EA4-B533-1213E6C27A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFD69375-AB83-4EA4-B533-1213E6C27A28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1D7A2834-0DA4-4861-80AA-180C22328B46} = {0C5FE06C-E8D5-4D8A-965A-187EA42B8FA5}
+		{C8A88F37-22E7-4840-B7FE-CAA8557619CC} = {0C5FE06C-E8D5-4D8A-965A-187EA42B8FA5}
+		{34F31D8B-973E-4AC2-85A7-F98C1BE42E59} = {F0E52AAD-7E17-4811-BFD8-57244D5CED43}
+		{CFD69375-AB83-4EA4-B533-1213E6C27A28} = {BC4FB2D3-4A4C-44D0-9692-BDB17B3A77CD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70BFC999-EE3E-42E5-A793-83D98569F637}
+	EndGlobalSection
+EndGlobal
