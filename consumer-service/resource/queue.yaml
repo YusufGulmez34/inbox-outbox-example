@@ -1,0 +1,16 @@
+product:
+  productCreated:
+    exchange: "product.events"
+    exchangeType: "topic"
+    routingKey: "productCreated"
+    queue: "product.event.productCreated"
+  productDeleted:
+    exchange: "product.events"
+    exchangeType: "topic"
+    routingKey: "productDeleted"
+    queue: "product.event.productDeleted"
+  productUpdated:
+    exchange: "product.events"
+    exchangeType: "topic"
+    routingKey: "productUpdated"
+    queue: "product.event.productUpdated"      

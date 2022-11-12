@@ -1,0 +1,84 @@
+﻿version: '2.1'
+
+services:
+  api:
+    build:
+      context: ./InBoxOutBoxExample
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      mongodb:
+        condition: service_started
+      postgres:
+        condition: service_healthy
+      consumer:
+        condition: service_started
+    restart: on-failure
+  consumer:
+    build: 
+      context: ./consumer-service
+      dockerfile: Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      mongodb:
+        condition: service_started
+      postgres:
+        condition: service_healthy
+    restart: on-failure
+  publisher:
+    build: 
+      context: ./publisher-service
+      dockerfile: Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    restart: on-failure
+  rabbitmq:
+    image: rabbitmq:latest
+    hostname: rabbit
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - rabbitdata:/var/lib/rabbitmq/
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 1s
+      retries: 3
+  postgres:
+    image: postgres:latest
+    hostname: postgres
+    environment:
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=my_db
+    ports:
+      - 5432:5432
+    restart: on-failure
+    volumes: 
+      - postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: pg_isready -U postgres
+      interval: 1s
+      retries: 3
+  mongodb:
+    image: mongo:latest
+    hostname: mongo
+    ports:
+      - 27017:27017
+    restart: on-failure
+    volumes:
+      - mongodata:/data/db
+volumes:
+  postgres:
+    driver: local
+  mongodata:
+    driver: local
+  rabbitdata:
+   driver: local
+  
